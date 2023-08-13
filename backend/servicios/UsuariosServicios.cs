@@ -32,5 +32,27 @@ namespace backend.servicios
             return result;
         }    
 
+         public static int UpdateUsuarios(Usuarios usuarios)
+        {
+            const string sql = "UPDATE [dbo].[USUARIOS] SET [USER_NAME] = @user_name, [NOMBRE_COMPLETO] = @nombre_completo, [PASSWORD] = @password WHERE [ID] = @id";
+            var parameter = new DynamicParameters();
+            parameter.Add("id", usuarios.Id, DbType.Int32);
+            parameter.Add("user_name", usuarios.UserName, DbType.String);
+            parameter.Add("nombre_completo", usuarios.NombreCompleto, DbType.String);
+            parameter.Add("password", usuarios.Password, DbType.String);
+            var result = BDManager.GetInstance.SetData(sql, parameter);
+            return result;
+        }
+
+        public static int DeleteUsuarios(int id)
+        {
+            const string sql = "DELETE FROM [dbo].[USUARIOS] WHERE [ID] = @id";
+            var parameter = new DynamicParameters();
+            parameter.Add("id", id, DbType.Int32);
+            var result = BDManager.GetInstance.SetData(sql, parameter);
+            return result;
+        }
+
+
     }
 }

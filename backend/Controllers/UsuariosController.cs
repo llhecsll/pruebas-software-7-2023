@@ -59,4 +59,38 @@ public class UsuariosController : ControllerBase
             return StatusCode(500, ex.Message);
         }
     } 
+
+    [HttpPut]
+    [Route("UpdateUsuario")]
+    public IActionResult UpdateUsuario(Usuarios usuarios)
+    {
+        try
+        {
+            var result = UsuariosServicios.UpdateUsuarios(usuarios);
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ex.Message);
+        }
+    }
+
+    
+    [HttpDelete]
+    [Route("DeleteUsuario")]
+    public IActionResult DeleteUsuario([FromQuery]int id)
+    {
+        try
+        {
+            var result = UsuariosServicios.DeleteUsuarios(id);
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ex.Message);
+        }
+    }
+
+
+
 }
