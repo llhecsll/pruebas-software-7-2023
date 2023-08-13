@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj": {}
+    "c:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj": {
+    "c:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj",
+        "projectUniqueName": "c:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj",
+        "projectPath": "c:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\hcalayo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\obj\\",
+        "outputPath": "c:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hcalayo\\AppData\\Roaming\\NuGet\\NuGet.Config"
