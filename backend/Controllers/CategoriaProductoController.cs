@@ -12,9 +12,9 @@ public class CategoriaProductoController : ControllerBase
     public CategoriaProductoController(IConfiguration configuration)
     {
         _configuration = configuration;
-        // connectionString = _configuration["SqlConnectionString:DefaultConnection"];
-        // BDManager.GetInstance.ConnectionString = connectionString;
-        BDManager.GetInstance.ConnectionString = "workstation id=database-hermes.mssql.somee.com;packet size=4096;user id=hcayalo_SQLLogin_1;pwd=2itb6kw6gc;data source=database-hermes.mssql.somee.com;persist security info=False;initial catalog=database-hermes";
+        connectionString = _configuration["SqlConnectionString:DefaultConnection"];
+        BDManager.GetInstance.ConnectionString = connectionString;
+        // BDManager.GetInstance.ConnectionString = "workstation id=database-hermes.mssql.somee.com;packet size=4096;user id=hcayalo_SQLLogin_1;pwd=2itb6kw6gc;data source=database-hermes.mssql.somee.com;persist security info=False;initial catalog=database-hermes";
     }
 
     [HttpGet]

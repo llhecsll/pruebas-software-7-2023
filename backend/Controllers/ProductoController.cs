@@ -4,12 +4,12 @@ using backend.servicios;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers;
-public class UsuariosController : ControllerBase
+public class ProductoController : ControllerBase
 {
     private readonly IConfiguration _configuration;
     private readonly string? connectionString;
 
-    public UsuariosController(IConfiguration configuration)
+    public ProductoController(IConfiguration configuration)
     {
         _configuration = configuration;
         connectionString = _configuration["SqlConnectionString:DefaultConnection"];
@@ -18,12 +18,12 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpGet]
-    [Route("GetAllUsuarios")]
-    public IActionResult GetAllUsuarios()
+    [Route("GetAllProducto")]
+    public IActionResult GetAllProducto()
     {
         try
         {
-            var result = UsuariosServicios.ObtenerTodo<Usuarios>();
+            var result = ProductoServicios.ObtenerTodo<Producto>();
             return Ok(result);
         }
         catch (Exception ex)
@@ -33,12 +33,12 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpGet]
-    [Route("GetUsuariosById")]
-    public IActionResult GetUsuariosById([FromQuery]int id)
+    [Route("GetProductoById")]
+    public IActionResult GetProductoById([FromQuery]int id)
     {
         try
         {
-            var result = UsuariosServicios.ObtenerById<Usuarios>(id);
+            var result = ProductoServicios.ObtenerById<Producto>(id);
             return Ok(result);
         }
         catch (Exception ex)
@@ -48,10 +48,10 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpPost]
-    [Route("AddUsuario")]
-    public IActionResult AddUsuario(Usuarios usuarios){
+    [Route("AddProducto")]
+    public IActionResult AddProducto(Producto producto){
         try{
-            var result = UsuariosServicios.InsertUsuarios(usuarios);
+            var result = ProductoServicios.InsertProducto(producto);
             return Ok(result);
         }
         catch (Exception ex)
