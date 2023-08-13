@@ -31,4 +31,32 @@ public class CategoriaProductoController : ControllerBase
             return StatusCode(500, ex.Message);
         }
     }
+
+    [HttpGet]
+    [Route("GetCategoriaProductoById")]
+    public IActionResult GetCategoriaProductoById([FromQuery]int id)
+    {
+        try
+        {
+            var result = CategoriaProductoServicios.ObtenerById<CategoriaProducto>(id);
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ex.Message);
+        }
+    }
+
+    [HttpPost]
+    [Route("AddCategoriaProducto")]
+    public IActionResult AddCategoriaProducto(CategoriaProducto categoriaProducto){
+        try{
+            var result = CategoriaProductoServicios.InsertCategoriaProducto(categoriaProducto);
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ex.Message);
+        }
+    } 
 }

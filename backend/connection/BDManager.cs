@@ -29,6 +29,8 @@ namespace backend.connection
 
         // Cadena de conexion que se obtiene externamente
         public string? ConnectionString { get; set; }
+
+        // Metodo para obtener un listado de la base de datos (Dapper)
         public IEnumerable<T>GetData<T>(string sql){
             using var connection = new SqlConnection(ConnectionString);
             connection.Open();
@@ -36,7 +38,21 @@ namespace backend.connection
             return connection.Query<T>(sql);
         }
 
-        
+        // Metodo para obtener un listado de la base de datos pasandoles un parametro (Dapper)
+        public IEnumerable<T> GetDataWithParameters<T>(string sql, DynamicParameters dynamicParameters){
+            using var connection = new SqlConnection(ConnectionString);
+            connection.Open();
+            DefaultTypeMap.MatchNamesWithUnderscores=true;
+            return connection.Query<T>(sql,dynamicParameters);
+        }
+
+        //Metodo para escribir en la base de datos (Dapper)
+        public int SetData(string sql, DynamicParameters dynamicParameters){
+            using var connection = new SqlConnection(ConnectionString);
+            connection.Open();
+            DefaultTypeMap.MatchNamesWithUnderscores=true;
+            return connection.Execute(sql,dynamicParameters);
+        }
 
     }
     
