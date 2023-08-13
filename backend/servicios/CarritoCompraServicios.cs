@@ -29,7 +29,28 @@ namespace backend.servicios
             parameter.Add("id_usuario", carritoCompra.IdUsuario, DbType.Int64);
             var result = BDManager.GetInstance.SetData(sql, parameter);
             return result;
-        }    
+        }   
+
+        public static int UpdateCarritoCompra(CarritoCompra carritoCompra)
+        {
+            const string sql = "UPDATE [CARRITO_COMPRA] SET [FECHA] = @fecha, [ID_USUARIO] = @id_usuario WHERE [ID] = @id";
+            var parameter = new DynamicParameters();
+            parameter.Add("id", carritoCompra.Id, DbType.Int32);
+            parameter.Add("fecha", carritoCompra.Fecha, DbType.DateTime);
+            parameter.Add("id_usuario", carritoCompra.IdUsuario, DbType.Int32);
+            var result = BDManager.GetInstance.SetData(sql, parameter);
+            return result;
+        }
+
+        public static int DeleteCarritoCompra(int id)
+        {
+            const string sql = "DELETE FROM [CARRITO_COMPRA] WHERE [ID] = @id";
+            var parameter = new DynamicParameters();
+            parameter.Add("id", id, DbType.Int32);
+            var result = BDManager.GetInstance.SetData(sql, parameter);
+            return result;
+        } 
+        
 
     }
 }
