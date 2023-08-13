@@ -3,4 +3,5 @@
  - dotnet new webapi -o backend
  - dotnet dev-certs https --trust
  - dotnet run --launch-profile https
+ - dotnet add package Dapper
 
