@@ -39,5 +39,39 @@ namespace backend_unit_test
             var result = UsuariosServicios.InsertUsuarios(usuarioTemp);
             Assert.Equal(1, result);
         }
+
+        [Fact]
+        public void Usuarios_Actualizar()
+        {
+            Usuarios usuarioTemp = new()
+            {
+                Id = 105,
+                UserName = "untest1",
+                NombreCompleto = "UserName Test1",
+                Password = "Password Test1"
+            };
+
+            var result = UsuariosServicios.UpdateUsuarios(usuarioTemp);
+            Assert.Equal(1, result);
+        }
+
+
+        [Fact]
+        public void Usuarios_Eliminar()
+        {
+            var result = UsuariosServicios.DeleteUsuarios(105);
+            Assert.Equal(1, result);
+        }
+
+
     }
+
+    
+
+    
+
+    
+
+
+
 }
