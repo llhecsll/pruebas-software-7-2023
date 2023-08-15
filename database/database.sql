@@ -188,6 +188,16 @@ INSERT INTO [dbo].[DETALLE_CARRITO]([CANTIDAD], [ID_PRODUCTO], [ID_CARRITO_COMPR
 
 
  "USUARIO_REGISTRO" -> UsuariosRegistro
+// insertar Detalle de carrito
+CREATE PROCEDURE InsertarDetalleCarrito
+    @Cantidad INT,
+    @IdProducto INT,
+    @IdCarritoCompra INT
+AS
+BEGIN
+    INSERT INTO DETALLE_CARRITO (CANTIDAD, ID_PRODUCTO, ID_CARRITO_COMPRA)
+    VALUES (@Cantidad, @IdProducto, @IdCarritoCompra);
+END
 
 
 
