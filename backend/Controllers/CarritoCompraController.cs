@@ -4,6 +4,9 @@ using backend.servicios;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
 public class CarritoCompraController : ControllerBase
 {
     private readonly IConfiguration _configuration;

@@ -4,6 +4,9 @@ using backend.servicios;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
 public class ProductoController : ControllerBase
 {
     private readonly IConfiguration _configuration;
