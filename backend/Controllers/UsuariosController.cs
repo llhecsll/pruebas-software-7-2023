@@ -1,9 +1,13 @@
 using backend.connection;
 using backend.entidades;
 using backend.servicios;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers;
+[EnableCors("DevelopmentCors")]
+[ApiController]
+[Route("api/[controller]")]
 public class UsuariosController : ControllerBase
 {
     private readonly IConfiguration _configuration;
