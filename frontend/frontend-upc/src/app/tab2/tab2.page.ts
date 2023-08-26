@@ -58,7 +58,7 @@ export class Tab2Page {
           console.log(error);
       },
       complete: () => {
-          //console.log('complete - this.AddUsuario()');
+          //console.log('complete - this.addCategoria()');
       },
   });
   }

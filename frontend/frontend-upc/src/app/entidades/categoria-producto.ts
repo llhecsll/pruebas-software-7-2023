@@ -1,3 +1,3 @@
 export class CategoriaProducto{
-    public nombre: string = "";
-  }
+  public nombre: string = "";
+}
