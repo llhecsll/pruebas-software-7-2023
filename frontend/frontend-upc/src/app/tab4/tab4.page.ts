@@ -61,8 +61,7 @@ export class Tab4Page {
 
   public addCarrito(){
     this.AddCarritoFromBackend(this.fecha , this.idUsuario)
-    this.AddDetalleFromBackend(this.cantidad, this.idProducto , this.idCarritoCompra)
-   }
+  }
   
    private AddCarritoFromBackend(fecha: Date, idUsuario: number){
 
@@ -76,7 +75,7 @@ export class Tab4Page {
           if(response.body == 1){
               alert("Se agrego el CARRITO con exito :)");
               this.getCarritoFromBackend();//Se actualize el listado
-              this.fecha = new Date();;
+              this.fecha = new Date();
               this.idUsuario = 1;
           }else{
               alert("Al agregar al CARRITO fallo exito :(");
@@ -91,7 +90,9 @@ export class Tab4Page {
     });
   }
 
-
+  public addDetalleCarrito(){
+    this.AddDetalleFromBackend(this.cantidad, this.idProducto , this.idCarritoCompra)
+  }
   private AddDetalleFromBackend(cantidad: number, idProducto: number , idCarritoCompra: number){
 
     var detalleEntidad = new DetalleCarrito();
