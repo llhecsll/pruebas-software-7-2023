@@ -960,26 +960,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hcalayo\\.nuget\\packages\\": {}
+    "C:\\Users\\hcaya\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\hcaya\\OneDrive\\Documentos\\CUMBBRE\\Gestion de Pruebas de Software\\pruebas-software-7-2023\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\hcalayo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hcalayo\\Documents\\GitHub\\pruebas-software-7-2023\\backend\\obj\\",
+      "projectPath": "C:\\Users\\hcaya\\OneDrive\\Documentos\\CUMBBRE\\Gestion de Pruebas de Software\\pruebas-software-7-2023\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\hcaya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hcaya\\OneDrive\\Documentos\\CUMBBRE\\Gestion de Pruebas de Software\\pruebas-software-7-2023\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hcalayo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\hcaya\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
